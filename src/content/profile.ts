@@ -60,7 +60,7 @@ export const whatsappHref = `https://wa.me/${profile.whatsapp.number}?text=${enc
 
 /** Small numbers under the hero. Delete any you don't want to claim yet. */
 export const stats = [
-  { value: "6+", label: "Projects shipped" },
+  { value: "7+", label: "Projects shipped" },
   { value: "15+", label: "Technologies" },
   { value: "2+", label: "Years building" },
 ];
@@ -187,6 +187,43 @@ export const projects: Project[] = [
     image: "/work/sai-space-realty.jpg",
     featured: true,
     theme: { icon: "home", accent: "#c4553f" },
+  },
+  {
+    slug: "neurofence",
+    title: "Neurofence",
+    client: "Personal project",
+    year: "2026",
+    summary:
+      "An **offline, air-gapped scanner** that audits downloaded open-source LLMs for weight poisoning and hidden backdoors before you deploy them.",
+    tags: ["Python", "PyTorch", "PyQt6", "Transformers"],
+    href: "https://nerofence-2ooz.vercel.app/",
+    repo: "https://github.com/moreyash007/nerofence",
+    image: "/work/neurofence.jpg",
+    featured: true,
+    theme: { icon: "focus", accent: "#3f9e7a" },
+    caseStudy: {
+      role: "Scanner pipeline, desktop app and report viewer",
+      problem:
+        "Open-source LLM weights are downloaded and trusted on faith. A model can carry **weight poisoning or a hidden backdoor** that behaves normally until a specific trigger appears — and ==there's no obvious way to see that by just running it==.\n\nChecking shouldn't mean uploading the weights to someone else's service, either.",
+      solution:
+        "NeuroFence loads the model **entirely offline** into an isolated PyTorch sandbox and feeds it synthetic adversarial prompts — baseline, random, structural and trigger-based. Forward hooks watch the transformer's MLP activations.\n\nThe tell is the **dormant neuron**: one that stays quiet on normal input but spikes under a specific trigger. NeuroFence flags those with Z-scores, with guards against false positives, and rolls the result into a safety score and a verdict such as ==CRITICAL or CLEAN==.\n\nScans export to JSON. The report viewer — a static page that parses everything in the browser — turns a report into a **deployment verdict out of 100**, a breakdown of what cost points (peak severity, dormancy, amplification, layer spread, neuron density) and an **activation heatmap** across layers and neuron channels. ==Nothing is uploaded==.",
+      stack: [
+        { name: "Python + PyTorch", why: "Forward hooks on the transformer's MLP layers are how activations get observed during a scan." },
+        { name: "Hugging Face Transformers", why: "Loads local models in offline mode, safetensors only, with remote code disabled — the scanner itself can't be tricked into running a model's code." },
+        { name: "PyQt6", why: "The desktop GUI. Scans run on a background QThread so the interface stays responsive during a long run." },
+        { name: "Static web viewer", why: "Parses a report.json entirely in the browser, with no server, API or storage — a report's layer names and trigger prompts never leave the machine that opened it." },
+      ],
+      summary:
+        "An **offline, air-gapped** LLM scanner: adversarial prompts into an isolated sandbox, dormant-neuron detection on MLP activations, a safety verdict, and a browser-only report viewer — with no network calls at any point in the scan.",
+      conclusion:
+        "Every design choice leans the same way: **nothing leaves the machine**. No cloud API, no network calls, safetensors-only loading and remote code disabled.\n\nIt also ships a mock-poisoning script that builds a model with a known backdoor, and the viewer has built-in backdoored and clean sample reports — so the whole pipeline can be ==verified end to end== against a case where the answer is already known.",
+      images: [
+        {
+          src: "/work/neurofence-report.jpg",
+          caption: "Report viewer — verdict, score breakdown and activation heatmap (sample report)",
+        },
+      ],
+    },
   },
   {
     slug: "cafe-crm",
