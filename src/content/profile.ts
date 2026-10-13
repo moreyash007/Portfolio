@@ -50,7 +50,7 @@ export const profile = {
 
 export const socials = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/yash-more-8b9272361/" },
-  { label: "GitHub", href: "https://github.com/cristanoronaldo710" },
+  { label: "GitHub", href: "https://github.com/moreyash007" },
 ];
 
 /** Ready-to-use wa.me link with the greeting pre-filled. */
@@ -99,7 +99,8 @@ export type ProjectIconKey =
   | "cafe"
   | "barber"
   | "kanban"
-  | "ticket";
+  | "ticket"
+  | "home";
 
 export type Project = {
   /** URL-safe id. Used for the case study anchor. */
@@ -175,36 +176,17 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "neurofence",
-    title: "Neurofence",
-    client: "Personal project",
-    year: "20XX",
+    slug: "sai-space-realty",
+    title: "Sai Space Realty",
+    client: "Real estate · Pune",
+    year: "2026",
     summary:
-      "A focus tool built on **friction, not willpower** — commit to a session ahead of time, and the block holds regardless of how you feel five minutes in.",
-    tags: ["Next.js", "TypeScript", "Browser extension"],
+      "A **real-estate advisory website** for buying, leasing and investing in property across India — searchable listings, category browsing, enquiries and WhatsApp contact, with an admin area behind it.",
+    tags: ["Next.js", "Tailwind CSS", "Supabase"],
+    href: "https://saispacerealty.com",
+    image: "/work/sai-space-realty.jpg",
     featured: true,
-    theme: { icon: "focus", accent: "#3f9e7a" },
-    caseStudy: {
-      role: "Design and frontend, focus-session logic",
-      problem:
-        "Most blockers are one tap away from being disabled, which means they only work on days you don't actually need them. Apps that ask ==how much willpower you have left== are asking the wrong question — by the time you're deciding whether to open the blocked app, you've already lost.",
-      solution:
-        "**Friction, not willpower.** A focus session is a commitment made before you need it — pick a duration and what's blocked, and it holds for that window regardless of how you feel five minutes in.\n\nThe dashboard reports where attention actually went, in plain numbers, ==not a guilt-driven streak counter==. The goal was a tool that treats discipline as a design problem, not a character flaw.",
-      stack: [
-        { name: "Browser extension APIs", why: "Blocking has to happen at the browser level, before a distracting page even loads." },
-        { name: "Next.js", why: "The session dashboard and history live outside the extension, as a normal web app." },
-        { name: "TypeScript", why: "Session state — active, blocked list, time remaining — is exactly the kind of state machine worth typing properly." },
-        { name: "IndexedDB", why: "Session history needs to survive offline and sync later, with no reason to round-trip to a server for local stats." },
-      ],
-      summary:
-        "A **commitment-device** focus blocker: sessions locked in ahead of time, plain-number attention reports instead of guilt streaks, blocking enforced at the browser level so it can't be talked out of.",
-      conclusion:
-        "The friction-over-willpower framing held up — the sessions people actually kept were the ones committed to in advance, not the ones with an escape hatch.\n\n==Next==: shared sessions, so a block can be a team agreement instead of a solo one.",
-      images: [
-        { caption: "Session start — duration and blocked list" },
-        { caption: "Attention report, plain numbers" },
-      ],
-    },
+    theme: { icon: "home", accent: "#c4553f" },
   },
   {
     slug: "cafe-crm",
@@ -438,21 +420,13 @@ export type EducationEntry = {
   detail?: string;
 };
 
-/**
- * ⚠ STILL PLACEHOLDER — degree confirmed (BCA), but school and dates are not.
- * LinkedIn requires a login, so these couldn't be read automatically — fill
- * in `school` and `period` (and `detail` if you want a grade/specialisation).
- */
+/** From the Education section of the LinkedIn profile. */
 export const education: EducationEntry[] = [
   {
-    degree: "Bachelor of Computer Application (BCA)",
-    school: "Your college or university",
-    period: "20XX — 20XX",
-  },
-  {
-    degree: "Higher Secondary / Class XII",
-    school: "Your school",
-    period: "20XX — 20XX",
+    degree: "Bachelor of Computer Applications (BCA), Computer Programming",
+    school: "KECS Moolji Jaitha College",
+    period: "Oct 2020 — Nov 2024",
+    detail: "Grade 8.40 · Python, Django",
   },
 ];
 

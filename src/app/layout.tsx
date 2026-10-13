@@ -79,7 +79,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} h-full`}>
+    /* suppressHydrationWarning: the inline script below sets data-theme on
+       <html> before React loads, whenever a visitor previously chose light.
+       The server HTML can't know that, so without this React logs a
+       hydration-mismatch error for every returning light-theme visitor. It
+       only silences this one element's attributes, not its children. */
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${inter.variable} ${jetbrainsMono.variable} h-full`}
+    >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>

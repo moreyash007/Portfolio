@@ -20,14 +20,17 @@ npm run dev
 | Work grid + case studies | `projects` |
 | Tech stack wall | `techStack` |
 | Jobs | `experience` |
-| **Education** | `education` ⚠ placeholder |
-| **Certifications** | `certifications` ⚠ placeholder |
+| Education | `education` |
+| Certifications | `certifications` |
 
 ### ⚠ Still needs your real data
 
-LinkedIn requires a login to read a profile, so **education and certifications
-could not be imported** — both are clearly-marked placeholders in `profile.ts`.
-Replace them with your actual entries. Same for `experience` and `projects`.
+`experience`, `education` and `certifications` come from the LinkedIn profile.
+**Five projects are still drafts**: Media OS, Cafe (CRM), Barber Shop, Jira Clone
+and ITSM have placeholder years (`20XX`) and summaries, tags and case studies
+written from the project name alone — not from what was actually built. Replace
+them with real details. Sai Space Realty is sourced from the live site and has no
+case study yet.
 
 The About paragraphs are written prose, not lorem ipsum, but they were written
 without knowing your specifics — no invented employers, dates, or numbers. Swap
@@ -245,7 +248,5 @@ Everything prerenders as static HTML — there is no server runtime to pay for.
 
 - [ ] **Wire enquiry storage** — submissions are currently logged and dropped
 - [ ] Set `ENQUIRY_TO_EMAIL`, `ENQUIRY_PHONE`, `NEXT_PUBLIC_SITE_URL` on the host
-- [ ] Replace `education` and `certifications` (LinkedIn couldn't be read)
-- [ ] Rewrite the two case studies with real projects
-- [ ] Replace the placeholder GitHub URL in `socials`
+- [ ] Replace the drafted summaries, years and case studies for Media OS, Cafe (CRM), Barber Shop, Jira Clone and ITSM with real details
 - [ ] Add real screenshots to `public/work/`

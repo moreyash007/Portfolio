@@ -208,6 +208,17 @@ export function SpeakerMuteIcon({ className }: IconProps) {
   );
 }
 
+/** House with a door — real-estate / property projects. */
+export function HomeIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 16 16" {...base} className={className}>
+      <path d="M2.25 7.75 8 2.5l5.75 5.25" />
+      <path d="M3.75 6.5V13.5h8.5V6.5" />
+      <path d="M6.75 13.5V9.75h2.5v3.75" />
+    </svg>
+  );
+}
+
 /** Certificate seal, for the credentials list. */
 export function BadgeIcon({ className }: IconProps) {
   return (

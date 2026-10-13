@@ -6,6 +6,7 @@ import {
   ScissorsIcon,
   KanbanIcon,
   TicketIcon,
+  HomeIcon,
 } from "./icons";
 
 const ICONS: Record<ProjectIconKey, (props: { className?: string }) => React.ReactElement> = {
@@ -15,6 +16,7 @@ const ICONS: Record<ProjectIconKey, (props: { className?: string }) => React.Rea
   barber: ScissorsIcon,
   kanban: KanbanIcon,
   ticket: TicketIcon,
+  home: HomeIcon,
 };
 
 /**
