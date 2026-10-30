@@ -26,11 +26,12 @@ npm run dev
 ### ⚠ Still needs your real data
 
 `experience`, `education` and `certifications` come from the LinkedIn profile.
-**Five projects are still drafts**: Media OS, Cafe (CRM), Barber Shop, Jira Clone
-and ITSM have placeholder years (`20XX`) and summaries, tags and case studies
-written from the project name alone — not from what was actually built. Replace
-them with real details. Sai Space Realty is sourced from the live site and has no
-case study yet.
+**Four projects are still drafts**: Media OS, Barber Shop, Jira Clone and ITSM
+have placeholder years (`20XX`) and summaries, tags and case studies written from
+the project name alone — not from what was actually built. Replace them with real
+details. Neurofence, Sai Space Realty and Sai Space Realty CRM are sourced from
+the real repo / live sites; the two Sai Space projects have no case study yet. The
+CRM sits behind a login, so its card uses the public login screen.
 
 The About paragraphs are written prose, not lorem ipsum, but they were written
 without knowing your specifics — no invented employers, dates, or numbers. Swap
@@ -248,5 +249,6 @@ Everything prerenders as static HTML — there is no server runtime to pay for.
 
 - [ ] **Wire enquiry storage** — submissions are currently logged and dropped
 - [ ] Set `ENQUIRY_TO_EMAIL`, `ENQUIRY_PHONE`, `NEXT_PUBLIC_SITE_URL` on the host
-- [ ] Replace the drafted summaries, years and case studies for Media OS, Cafe (CRM), Barber Shop, Jira Clone and ITSM with real details
+- [ ] Replace the drafted summaries, years and case studies for Media OS, Barber Shop, Jira Clone and ITSM with real details
+- [ ] Add in-app CRM screenshots (use demo data, never real client leads) to `public/work/`
 - [ ] Add real screenshots to `public/work/`

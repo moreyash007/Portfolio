@@ -226,35 +226,16 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "cafe-crm",
-    title: "Cafe (CRM)",
-    client: "Personal project",
-    year: "20XX",
+    slug: "sai-space-crm",
+    title: "Sai Space Realty CRM",
+    client: "Sai Space Realty",
+    year: "2026",
     summary:
-      "A counter-sized CRM — order history, customer notes, and a simple points-per-order loyalty rule, built for speed during a rush.",
-    tags: ["Next.js", "PostgreSQL", "Node.js"],
-    theme: { icon: "cafe", accent: "#b5793a" },
-    caseStudy: {
-      role: "Full stack — schema, backend, and counter-facing UI",
-      problem:
-        "Small cafes run loyalty and regulars out of a notebook or a spreadsheet the owner half-remembers to update. There's no real answer to \"who are our regulars\" beyond a feeling — ==the data that would justify a loyalty program was never collected in the first place==.",
-      solution:
-        "A CRM sized for a counter, not an enterprise. Order history and customer notes live on one screen, and the loyalty layer is a simple points-per-order rule rather than a configurable rules engine nobody at a five-person cafe needed.\n\nThe staff-facing UI stays **deliberately minimal** — big touch targets, one screen per task — because it has to work fast during a rush, not look impressive in a demo.",
-      stack: [
-        { name: "Next.js", why: "One app for the counter view and the owner's reporting view, sharing the same data layer." },
-        { name: "PostgreSQL", why: "Orders, customers and loyalty points are relational, with running totals that need to stay correct." },
-        { name: "Node.js / Express", why: "A small, boring API layer — this didn't need more than CRUD plus one loyalty-points rule." },
-        { name: "Tailwind CSS", why: "Fast to hit large, thumb-friendly touch targets for a screen that lives next to a till." },
-      ],
-      summary:
-        "A **counter-sized CRM** for a small cafe — order history, customer notes, and a simple points-per-order loyalty rule, built for speed during a rush rather than configurability nobody needed.",
-      conclusion:
-        "Keeping the loyalty logic to one simple rule instead of a rules engine was the right trade — it shipped fast and the owner could explain it to a new hire in one sentence.\n\n==What I'd add==: a lightweight low-stock nudge, since inventory kept coming up as the next thing owners wanted to track.",
-      images: [
-        { caption: "Counter view — order entry and customer lookup" },
-        { caption: "Owner dashboard — regulars and loyalty points" },
-      ],
-    },
+      "An internal **CRM for a real-estate team** — leads, site visits, bookings and team tracking in one installable app, behind admin-managed logins.",
+    tags: ["React", "Vite", "Supabase", "Tailwind CSS"],
+    href: "https://sai-space-crm.vercel.app/",
+    image: "/work/sai-space-crm.jpg",
+    theme: { icon: "kanban", accent: "#1f4e8c" },
   },
   {
     slug: "barber-shop",
